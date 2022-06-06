@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>cars</title>
+    <link rel="stylesheet" type="text/css" th ref="@{/css/style.css}"/>
+</head>
+<body>
+<a href="/">Back</a>
+<table border="1">
+    <tr>
+        <th><h1>model</h1></th>
+        <th><h1>country</h1></th>
+        <th><h1>release</h1></th>
+    </tr>
+    <tr th:each="car: ${countCar}">
+        <td th:text="${car.model}"/>
+        <td th:text="${car.country}"/>
+        <td th:text="${car.release}"/>
+    </tr>
+</table>
+</body>
+</html>
